@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" />
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url("https://images.unsplash.com/photo-1613061151913-c69b6a961dea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        font-family: 'Ubuntu', sans-serif;
+        overflow: hidden;
+    }
+
+    .title {
+        align-items: center;
+        text-align: center;
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 40px;
+        display: inline-block;
+        width: auto;
+    }
+
+    .n,
+    .nd {
+        color: #ff5a26;
+        display: inline-block;
+        font-size: 50px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .n:hover {
+        animation-name: rtt;
+        animation-duration: 1s;
+    }
+
+    @keyframes rtt {
+        0% {
+            transform: rotateY(360deg);
+        }
+    }
+
+    .ttitle {
+        width: fit-content;
+        margin-left: 700px;
+        margin-top: 150px;
+        margin-bottom: 10px;
+    }
+
+    .ttitle b {
+        /* width: fit-content; */
+        color: #ff5a26;
+        text-decoration: solid;
+        font-size: 25px;
+        display: inline-block;
+    }
+
+    .contact_back {
+        display: flex;
+        margin-left: 475px;
+        /* border: 2px solid red; */
+        /* background-color: rgb(rgb(88, 85, 85), rgb(128, 129, 128), rgb(129, 129, 129)); */
+        background: rgba(197, 195, 195, 0.7);
+        width: fit-content;
+        border-radius: 10px;
+        padding: 30px;
+    }
+
+    h3 {
+        color: blue;
+        font-size: 20px;
+    }
+
+    .icon {
+        display: inline-block;
+    }
+
+    .text {
+        margin: 5px;
+        width: 50%;
+        height: 75px;
+    }
+
+    .main input {
+        display: block;
+        padding: 5px;
+        margin: 20px;
+        /* width: 200px; */
+        width: max-content;
+        border-radius: 3px;
+        background-color: rgb(209, 208, 208);
+        border: 2px solid black;
+    }
+
+    ::placeholder {
+        color: black;
+        text-decoration: solid;
+        text-shadow: 1px 1px 1px white;
+        font-size: 15px;
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    input[type=submit] {
+        width: 100px;
+        margin: 3px auto;
+        background-color: blue;
+        color: white;
+        font-size: 15px;
+    }
+
+    input[type=submit]:hover {
+        background-color: white;
+        color: blue;
+    }
+</style>
+
+<body>
+    <div class="title">
+        <h1>book</h1>
+        <h1 class="nd">'</h1>
+        <h1 class="n">N</h1>
+        <h1 class="nd">'</h1>
+        <h1>go</h1>
+    </div>
+    <div class="ttitle"><b>
+            Contact
+            Us
+            Now
+        </b>
+    </div>
+    <div class="contact_back">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>139, CHARUSAT Campus,Changa, Gujarat, 388421</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p>shyamaljoshi2003@gmail.com</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon1">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p>+91 8780-502810</p>
+                </div>
+            </div>
+        </div>
+        <div class="form_here">
+            <form class="main" action="/contact" method="post">
+                <input type="text" name="name" size="15" class="name" placeholder="Username" required />
+                <input type="email" id="email" name="email" class="email" placeholder="E-mail" required />
+                <input type="tel" title="invalid phoneNumber" name="phone" size="10" class="num" placeholder="Number"
+                    min="10" />
+                <input type="text" id="repass" name="message" class="cpass" placeholder="Message" required />
+                <input type="submit" value="Send" class="submit" />
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

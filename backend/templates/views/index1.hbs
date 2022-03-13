@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book "N" go</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="icons8-duty-free-48.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Glory:wght@592&display=swap"
+        rel="stylesheet">
+    {{!--
+    <link rel="stylesheet" href="/css/style.css"> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+        integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Ubuntu&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins&family=Ubuntu&display=swap');
+
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-size: 100%;
+            color: white;
+        }
+
+        .hero {
+            margin: 0;
+            padding: 0;
+            background-image: url("https://wallpaperaccess.com/full/825191.jpg");
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .header {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 21px;
+            top: -15px;
+            /* border: 2px solid red; */
+        }
+
+        .left img {
+            padding: 0px;
+            margin: 0px;
+            width: 125px;
+            filter: invert(100%);
+        }
+
+        .mid {
+            display: block;
+            width: 37%;
+            margin: 12px auto;
+            /* padding: 0px 15px; */
+            background-color: black;
+            border-bottom-left-radius: 9px;
+            border-bottom-right-radius: 9px;
+            margin-top: 0px;
+            overflow: hidden;
+            /* border: 1px solid transparent; */
+        }
+
+        .right {
+            display: inline-block;
+            position: absolute;
+            right: 21px;
+            top: 15px;
+        }
+
+        .navbar {
+            display: inline-block;
+            margin-left: 33px;
+            /* margin-top: 50px; */
+            /* text-align: center; */
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            background-color: #f6b130;
+            color: #222222;
+            padding: 17px 15px;
+        }
+
+        .btn,
+        .bookbtn {
+            color: black;
+            background-color: #f6b130;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            padding: 5px 16px;
+            margin: 0px 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+
+        .btn:hover {
+            background: white;
+        }
+
+        .main {
+            padding: 51px 42px 119px;
+            position: relative;
+            left: 48px;
+            top: 100px;
+            margin: 0px -8px;
+            font-size: 50px;
+            background-color: rgba(31, 30, 30, 0.623);
+            font-family: 'Poppins', sans-serif;
+            width: 40%;
+        }
+
+        .bookbtn {
+            position: relative;
+            top: -10px;
+            left: 270px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+        }
+
+        .bookbtn:hover {
+            background-color: white;
+            /* border: 2px solid #222222; */
+            color: #222222;
+
+        }
+
+        .bigcontainer {
+            width: 400px;
+            height: 683px;
+            /* border: 4px solid rgb(255, 255, 255); */
+            margin: auto;
+            /* border: 2px solid white; */
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 60px;
+            position: absolute;
+            top: 32px;
+            right: -116px;
+        }
+
+        .container {
+
+            background-color: #f8f8fa;
+            /* border: 3px solid rgb(106, 153, 207); */
+            margin: auto;
+            /* border: 3px solid rgb(12, 32, 54); */
+            /* box-shadow: 
+            0px 0px 2px #5f5f5f,
+            0px 0px 0px 5px #ecf0f3,
+            8px 8px 15px #a7aaaf,
+            -8px -8px 15px #ffffff
+            ; */
+            text-align: center;
+            font-size: 17px;
+            color: #222222;
+            /* box-shadow:
+                inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px #ffffff; */
+            border-radius: 30px;
+            display: block;
+            padding: 1px 0px;
+            padding-bottom: 2px;
+            margin: 6px 0px;
+            width: 55%;
+            height: 40%;
+        }
+
+        .container img {
+            width: 177px;
+            border-radius: 30px;
+            padding: 7px 0px;
+        }
+
+        .boxbtn {
+            background-color: black;
+            border: 2px solid black;
+            color: white;
+            border-radius: 5px;
+            padding: 3px 28px;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        .boxbtn:hover {
+            background-color: #f6b130;
+            color: black;
+        }
+
+        .cardn {
+            padding: 0px 0px;
+            margin: 2px 0px 4px 0px;
+        }
+
+        .text {
+            height: 50vh;
+            width: 100%;
+            /* background-color: rgb(120 188 242 / 80%); */
+            color: #f6b130;
+            text-align: left;
+            padding-top: 70px;
+            padding-left: 120px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .text>p {
+            font-size: 2.5em;
+            /* text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.801); */
+            font-weight: 700;
+        }
+
+        .typing {
+            color: #ff5a26;
+        }
+
+        .containerimg>img {
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            top: 900px;
+            right: 100px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #f6b130b0;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        span {
+            color: #ff5926;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <header class="header">
+            <div class="left">
+                <img src="Go_Travel_Logo_600x600_crop_center-removebg-preview.png" alt="">
+            </div>
+            <div class="mid">
+                <!-- navigation bar -->
+                <ul class="navbar">
+                    <li> <a href="#" class="active">Home</a></li>
+                    <li> <a href="/Trips/Trips.html">Trips</a></li>
+                    <li> <a href="contact.html">Contact Us</a></li>
+                    <li> <a href="#ABT">About Us</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <button class="btn">Welcome!!!</button>
+
+            </div>
+        </header>
+        <div class="main">
+            <p>Are you guys waiting
+                for a good time ?</p>
+        </div>
+        <a href="/Trips/Trips.html" class="bookbtn">Discover</a>
+    </div>
+    </div>
+    <div class="text">
+        <p>What we are! <span class="typing"></span></p>
+
+        <p style="color:black">Every problem between you and your <br> Trip is now no more</p>
+    </div>
+
+    <div class="about-section" id="ABT">
+        <h1>About Us</h1>
+        <h3>
+            <p>We are the your one stop <span>Destination</span> to find your <span>Destination </span></p>
+        </h3>
+        <h4>
+            <p>So What Are You waiting for enroll in the trip</p>
+        </h4>
+    </div>
+
+
+    <script>
+        // Typing ...
+        var typed = new Typed(".typing", {
+            strings: ["Your Travel adviser", "Your Hotel planner", "Your Ticket bookers"],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>

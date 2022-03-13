@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    body {
+        background-image: url("https://images.unsplash.com/flagged/photo-1554443883-83db889b4007?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE1fHxuYXR1cmUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .title {
+        align-items: center;
+        text-align: center;
+        width: auto;
+    }
+
+    h1 {
+        font-size: 40px;
+        display: inline-block;
+        margin-top: 30px;
+        /* border-bottom: 2px dashed #ff5a26; */
+        width: auto;
+    }
+
+    .n,
+    .nd {
+        color: #ff5a26;
+        display: inline-block;
+        font-size: 50px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .n:hover {
+        animation-name: rtt;
+        animation-duration: 1s;
+    }
+
+    @keyframes rtt {
+        0% {
+            transform: rotateY(360deg);
+        }
+    }
+
+    .login {
+        text-decoration: none;
+        text-align: center;
+        color: #ff5a26;
+        font-size: 28px;
+        padding: 10px;
+        outline: none;
+    }
+
+    @keyframes try {
+        0% {
+            transform: rotateY(360deg);
+        }
+    }
+
+    .main {
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+        width: max-content;
+        height: max-content;
+        box-shadow: 5px 5px 10px rgb(61, 54, 54);
+        border-radius: 25px;
+        margin: auto;
+        padding: 30px;
+        margin-top: 50px;
+    }
+
+    input {
+        margin: 20px;
+        display: block;
+        padding: 10px;
+        border-radius: 4px;
+        border: none;
+        border-bottom: 2px solid #ff5a26;
+        width: 85%;
+        height: 40px;
+        background: transparent;
+    }
+
+    .loginn {
+        background: 0;
+        outline: none;
+        margin: 6px auto;
+        padding: 8px;
+        border: none;
+        display: block;
+        font-size: 25px;
+        color: #ff5a26;
+    }
+
+    .loginn:hover {
+        font-size: 25px;
+        text-shadow: 1px 1px black;
+        color: #ff5a26;
+        /*  border: 2px solid #ff5a26; */
+        width: auto;
+        background-color: rgb(245, 213, 153);
+        /* text-shadow: 1.5px 1.5px white; */
+        font-size: 25px;
+    }
+
+
+    ::placeholder {
+        color: black;
+        font-size: 16px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .dhave_acc {
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+        width: fit-content;
+        font-size: 17px;
+        margin: auto;
+    }
+
+    .dhave_acc a {
+        font-size: 17px;
+        color: #ff5a26;
+        border: transparent;
+    }
+</style>
+
+<body>
+    <div class="title">
+        <h1>book</h1>
+        <h1 class="nd">'</h1>
+        <h1 class="n">N</h1>
+        <h1 class="nd">'</h1>
+        <h1>go</h1>
+    </div>
+
+    <form class="main" action="/user" method="post" onsubmit="validate()">
+        <div class="login">
+            <b>Login</b>
+        </div>
+
+        <!-- <label> Firstname </label> -->
+        <input type="email" id="email" name="email" class="email" placeholder="E-mail" required />
+
+        <input type="Password" id="pass" name="password" class="pass" placeholder="Password" required />
+
+        <input type="submit" value="Login" class="loginn" />
+
+        <div class="dhave_acc">Don't have an Account?
+            <a href="signup.html"><b>SignUp</b></a>
+        </div>
+    </form>
+</body>
+
+</html>

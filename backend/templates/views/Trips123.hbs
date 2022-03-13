@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips</title>
+    <!-- {{!--
+    <link rel="stylesheet" href="style.css"> --}} -->
+    <link rel="shortcut icon" href="/icons8-duty-free-48.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("https://images.unsplash.com/photo-1448518340475-e3c680e9b4be?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG5hdHVyYWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+            background-size: cover;
+        }
+
+        .container {
+            width: 85%;
+            height: 85%;
+            background-color: rgba(16 18 27 / 40%);
+            border-radius: 10px;
+            backdrop-filter: blur(20px);
+            position: relative;
+        }
+
+        /* nav */
+        .nav {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.123);
+        }
+
+        .menu {
+            height: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.295);
+            border-radius: 50px;
+        }
+
+        a {
+            color: rgb(204, 204, 204);
+            border-radius: 50px;
+            padding: 0.6em 2em;
+            background: none;
+            text-decoration: none;
+            transition: all .2s;
+        }
+
+        a.active {
+            color: rgb(22, 22, 22);
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.178);
+        }
+
+        .searchBox {
+            padding: 1em 1.8em;
+            color: white;
+        }
+
+        .main {
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            overflow-x: auto;
+        }
+
+        .main::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* trendingMovies */
+        .Trips {
+            width: 95%;
+            margin: 1em auto;
+            color: rgb(204, 204, 204);
+        }
+
+        .Trips .cards {
+            margin-top: 0.6em;
+            padding: 0.5em 0 2em 0;
+            display: flex;
+            overflow-y: auto;
+        }
+
+        .Trips .cards::-webkit-scrollbar {
+            display: none;
+        }
+
+        .Trips .cards .card {
+            flex-shrink: 0;
+            width: 250px;
+            height: 150px;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            transition: all .4s;
+            margin-right: 1em;
+        }
+
+        .card::before {
+            content: attr(data-text);
+            position: absolute;
+            left: 45%;
+            bottom: -15%;
+            transform: translate(-45%);
+            font-size: .7em;
+            opacity: 0;
+            transition: all .4s;
+            margin-left: 15px;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.178); */
+        }
+
+        .Trips .cards .card img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            margin-left: -5px;
+        }
+
+        a {
+            margin-left: -20px;
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {{!-- <header class="nav">
+            <div class="menu">
+                <a href="#" class="active">Discover</a>
+                <a href="#">Domestic</a>
+                <a href="#">International</a>
+                <a href="#">Weekend</a>
+                <div class="searchBox">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </header> --}}
+        <div class="main">
+            <div class=" Trips">
+                <p class="dom">Domestic Trips</p>
+                <div class="cards">
+                    <div class="card dom" data-text="Darjiling">
+                        <a href="darjiling.html">
+                            <img src="https://images.unsplash.com/photo-1549817997-f6958ecf47b9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZGFyamVlbGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Darjiling">
+                        </a>
+                    </div>
+                    <div class="card dom" data-text="Goa">
+                        <a href="Goa.html">
+                            <img src="https://images.unsplash.com/photo-1560179406-1c6c60e0dc76?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z29hfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Goa">
+                        </a>
+                    </div>
+                    <div class="card dom" data-text="Jaipur">
+                        <a href="jaipur.html">
+                            <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8amFpcHVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Jaipur">
+                        </a>
+                    </div>
+                    <div class="card dom" data-text="Manali">
+                        <a href="manali.html">
+                            <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFuYWxpfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Manali">
+                        </a>
+                    </div>
+                    <div class="card dom" data-text="Mumbai">
+                        <a href="mumbai.html">
+                            <img src="https://images.unsplash.com/photo-1601961405399-801fb1f34581?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bXVtYmFpJTIwY2l0eXxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Mumbai">
+                        </a>
+                    </div>
+                    <div class="card dom" data-text="Srinagar">
+                        <a href="srinagar.html">
+                            <img src="https://images.unsplash.com/photo-1614591276564-7b3e69347a48?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3JpbmFnYXJ8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Srinagar">
+                        </a>
+                    </div>
+                    <div class="card dom" data-text="Udaipur">
+                        <a href="udaipur.html">
+                            <img src="https://images.unsplash.com/photo-1615836245337-f5b9b2303f10?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dWRhaXB1cnxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Udaipur">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="Trips">
+                <p class="int">International Trips</p>
+                <div class="cards">
+                    <div class="card int " data-text="Dubai">
+                        <a href="Goa.html">
+                            <img src="https://images.unsplash.com/photo-1523816572-a1a23d1a67b8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZHViYWl8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Dubai">
+                        </a>
+                    </div>
+                    <div class="card int" data-text="Greece">
+                        <a href="Goa.html">
+                            <img src="https://images.unsplash.com/photo-1504512485720-7d83a16ee930?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z3JlZWNlfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Greece">
+                        </a>
+                    </div>
+                    <div class="card int" data-text="Maldives">
+                        <a href="Goa.html">
+                            <img src="https://images.unsplash.com/photo-1540202404-a2f29016b523?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFsZGl2ZXN8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Maldives">
+                        </a>
+                    </div>
+                    <div class="card int" data-text="Paris">
+                        <a href="Goa.html">
+                            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGFyaXN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Paris">
+                        </a>
+                    </div>
+                    <div class="card int" data-text="Singapore">
+                        <a href="Goa.html">
+                            <img src="https://images.unsplash.com/photo-1574227492706-f65b24c3688a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNpbmdhcG9yZXxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Singapore">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Trips">
+                <p class="week">Weekend Trips</p>
+                <div class="cards">
+                    <div class="card week" data-text="Kutch">
+                        <a href="Goa.html">
+                            <img src="https://images.unsplash.com/photo-1549472899-1ed757265f81?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8a3V0Y2h8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Kutch">
+                        </a>
+                    </div>
+                    <div class="card week" data-text="matheran">
+                        <a href="Goa.html">
+                            <img src="https://images.unsplash.com/photo-1632661231170-a61d4010663a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWF0aGVyYW58ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Matheran">
+                        </a>
+                    </div>
+                    <div class="card week" data-text="Mount Abu">
+                        <a href="Goa.html">
+                            <img src="https://images.unsplash.com/photo-1596548749616-f1958cb3c6a3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnQlMjBhYnV8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Mount Abu">
+                        </a>
+                    </div>
+                    <div class="card week" data-text="Polo_Forest">
+                        <a href="Goa.html">
+                            <img src="https://images.unsplash.com/photo-1609222057381-2395dd20f6f9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cG9sbyUyMGZvcmVzdHxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Polo Forest">
+                        </a>
+                    </div>
+                    <div class="card week" data-text="Saputara">
+                        <a href="Goa.html">
+                            <img src="https://images.unsplash.com/photo-1548918867-a318cfdc9e14?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2FwdXRhcmF8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Saputara">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script>
+        const a = document.querySelectorAll("a");
+
+        a.forEach(e => {
+            e.addEventListener("click", (e) => {
+                console.log(e.target.classList);
+                a.forEach(e => {
+                    e.classList.remove("active");
+                })
+                if (!(e.target.classList.contains("active"))) {
+                    e.target.classList.add("active");
+                }
+            });
+        });
+        //var d=document.getElementsByClassName('dom');
+        const activeDom = () => { document.getElementsByClassName('Dom').style.display = 'none'; }
+    </script>
+</body>
+
+</html>

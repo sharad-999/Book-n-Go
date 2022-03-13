@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/icons8-duty-free-48.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="nav">
+            <div class="menu">
+                <a href="#" class="active">Discover</a>
+                <a href="#" >Domestic</a>
+                <a href="#" >International</a>
+                <a href="#" >Weekend</a>
+                <div class="searchBox">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+        <div class=" Trips">
+            <p class="dom">Domestic Trips</p>
+            <div class="cards">
+                <div class="card dom" data-text="Darjiling">
+                    <img src="/Trips/Domestic/Darjiling.jpg" alt="Darjiling" >
+                </div>
+                <div class="card dom" data-text="Goa">
+                    <img src="/Trips/Domestic/goa.jpg" alt="Goa" >
+                </div>
+                <div class="card dom" data-text="Jaipur">
+                    <img src="/Trips/Domestic/Jaipur.jpg" alt="Jaipur" >
+                </div>
+                <div class="card dom" data-text="Manali">
+                    <img src="/Trips/Domestic/Manali.jpg" alt="Manali" >
+                </div>
+                <div class="card dom" data-text="Mumbai">
+                    <img src="/Trips/Domestic/Mumbai.jpg" alt="Mumbai" >
+                </div>
+                <div class="card dom" data-text="Srinagar">
+                    <img src="/Trips/Domestic/Srinagar.jpg" alt="Srinagar" >
+                </div>
+                <div class="card dom" data-text="Udaipur">
+                    <img src="/Trips/Domestic/Udaipur.jpg" alt="Udaipur" >
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="Trips">
+            <p class="int">International Trips</p>
+            <div class="cards">
+                <div class="card int " data-text="Dubai">
+                    <img src="/Trips/International/Dubai.jpg" alt="Dubai" >
+                </div>
+                <div class="card int" data-text="Greece">
+                    <img src="/Trips/International/Greece.jpg" alt="Greece" >
+                </div>
+                <div class="card int" data-text="Maldives">
+                    <img src="/Trips/International/Maldives.jpg" alt="Maldives" >
+                </div>
+                <div class="card int" data-text="Paris">
+                    <img src="/Trips/International/Paris.jpg" alt="Paris" >
+                </div>
+                <div class="card int" data-text="Singapore">
+                    <img src="/Trips/International/Singapore.jpg" alt="Singapore" >
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="Trips">
+            <p class="week">Weekend Trips</p>
+            <div class="cards">
+                <div class="card week" data-text="Kutch">
+                    <img src="/Trips/Weekend/Kutch.jpg" alt="Kutch" >
+                </div>
+                <div class="card week" data-text="matheran">
+                    <img src="/Trips/Weekend/matheran.jpg" alt="Matheran" >
+                </div>
+                <div class="card week" data-text="Mount Abu">
+                    <img src="/Trips/Weekend/Mount_Abu.jpg" alt="Mount Abu" >
+                </div>
+                <div class="card week" data-text="Polo_Forest">
+                    <img src="/Trips/Weekend/Polo_Forest.jpg" alt="Polo Forest" >
+                </div>
+                <div class="card week" data-text="Saputara">
+                    <img src="/Trips/Weekend/Saputara.jpg" alt="Saputara" >
+                </div>
+            </div>
+        </div>
+        
+            
+    </div>
+    </div>
+
+
+    <script>
+        const a = document.querySelectorAll("a");   
+
+        a.forEach(e => {
+            e.addEventListener("click", (e) => {
+                console.log(e.target.classList);
+                a.forEach(e => {
+                    e.classList.remove("active");
+                })
+                if (!(e.target.classList.contains("active"))) {
+                    e.target.classList.add("active");
+                }
+            });
+        });
+
+        //var d=document.getElementsByClassName('dom');
+        const activeDom = () =>
+        { document.getElementsByClassName('Dom').style.display = 'none';}
+        
+        
+    </script>
+</body>
+
+</html>
